@@ -39,5 +39,7 @@ namespace MVC_GymBase_ProjectDBS.Models
         public System.Data.Entity.DbSet<MVC_GymBase_ProjectDBS.Models.Member> Members { get; set; }
 
         public System.Data.Entity.DbSet<MVC_GymBase_ProjectDBS.Models.Prices> Prices { get; set; }
+
+        public System.Data.Entity.DbSet<MVC_GymBase_ProjectDBS.Models.GymClasses> GymClasses { get; set; }
     }
 }

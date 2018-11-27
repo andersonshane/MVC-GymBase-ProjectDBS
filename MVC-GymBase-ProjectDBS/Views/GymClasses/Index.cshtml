@@ -1,0 +1,39 @@
+﻿@model IEnumerable<MVC_GymBase_ProjectDBS.Models.GymClasses>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.GymClassTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GymClassName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.GymClassTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GymClassName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.GymIDModels }) |
+            @Html.ActionLink("Details", "Details", new { id=item.GymIDModels }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.GymIDModels })
+        </td>
+    </tr>
+}
+
+</table>
