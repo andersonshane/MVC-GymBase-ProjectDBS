@@ -29,5 +29,13 @@ namespace MVC_GymBase_ProjectDBS.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<MVC_GymBase_ProjectDBS.Models.Booking> Bookings { get; set; }
+
+        public System.Data.Entity.DbSet<MVC_GymBase_ProjectDBS.Models.Facilities> Facilities { get; set; }
+
+        public System.Data.Entity.DbSet<MVC_GymBase_ProjectDBS.Models.Trainer> Trainers { get; set; }
+
+        public System.Data.Entity.DbSet<MVC_GymBase_ProjectDBS.Models.Member> Members { get; set; }
     }
 }
