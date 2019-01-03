@@ -1,4 +1,11 @@
-﻿@model IEnumerable<MVC_GymBase_ProjectDBS.Models.Prices>
+﻿@using MVC_GymBase_ProjectDBS.Models
+@model IndexViewModel
+<!--Changed model from Prices to IndexView Model to allow access for StripePublishable Key
+    Stripe Payment button has been added to prices page
+
+
+
+-->
 
 @{
     ViewBag.Title = "Index";
@@ -18,6 +25,7 @@
         </div>
     </div>
 </header>
+
 <section id="services" class="py-5 bg-dark">
     <div class="container">
         <div class="row">
@@ -46,7 +54,9 @@
 
                         </ul>
                         @Html.ActionLink("Get It", "MemberType", "User", null, new { @class = "btn btn-danger btn-block mt-2" })
+
                     </div>
+
                     <div class="card-footer text-muted">
                         <strong>1 Year</strong> Plan
                     </div>
@@ -81,6 +91,9 @@
                     </div>
                 </div>
             </div>
+            
+
+
             <div class="col-md-4">
                 <div class="card text-center">
                     <div class="card-header">
@@ -104,10 +117,27 @@
                             </li>
 
                         </ul>
-                        @Html.ActionLink("Get It", "MemberType", "User", null, new { @class = "btn btn-success btn-block mt-2" })
+                        <!--Once Off Payment Plan-->
+                        <form action="" method="POST">
+                            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                                    data-key="@Model.StripePublishableKey"> //Auto-Implemented Properties located in 'ManageViewModels - IndexViewModel'
+                            </script>
+                        </form>
+                        
                     </div>
+                    
+
+
                     <div class="card-footer text-muted">
                         <strong>Daily</strong> Plan
+                    </div>
+                    <!--Stripe Payment Button Added - JavaScript link allows for visa/mastercard validation-->
+                    <div class="col-md-6">
+                        <form action="" method="POST">
+                            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                                    data-key="@Model.StripePublishableKey"> //Auto-Implemented Properties located in 'ManageViewModels - IndexViewModel'
+                            </script>
+                        </form>
                     </div>
                 </div>
             </div>

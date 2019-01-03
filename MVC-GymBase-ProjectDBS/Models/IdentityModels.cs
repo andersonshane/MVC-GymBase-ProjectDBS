@@ -1,4 +1,6 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.Data.Entity;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
@@ -9,6 +11,15 @@ namespace MVC_GymBase_ProjectDBS.Models
     // You can add profile data for the user by adding more properties to your ApplicationUser class, please visit https://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
     public class ApplicationUser : IdentityUser
     {
+        //Additonal Columns for Stripe Subscription Plan Payments (audit)
+        [MaxLength(500)]
+        public string StripeCustomerId { get; set; }
+        public DateTime ActiveUntil { get; set; }
+        public DateTime? CreditCardExpires { get; set; }
+        //-----------------------------------------------------------------------
+        
+        /// <param name="manager"></param>
+        /// <returns></returns>
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType

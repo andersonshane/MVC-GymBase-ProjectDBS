@@ -10,8 +10,15 @@ namespace MVC_GymBase_ProjectDBS.Models
     [Table("Prices")]
     public class Prices
     {
+
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)] // since you set the IDs in code
         public int Price { get; set; }
+      
+        public class IndexViewModel
+        {
+            //Stripe Publishable Key - Setup Subscription
+            public string StripePublishableKey { get; set; }
+        }
     }
 }

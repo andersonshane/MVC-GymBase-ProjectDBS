@@ -21,5 +21,7 @@ namespace MVC_GymBase_ProjectDBS.Models
         public string Date { get; set; }
 
         public string Time { get; set; }
+        //Stripe Publishable Key
+        public string StripePublishableKey { get; set; }
     }
 }

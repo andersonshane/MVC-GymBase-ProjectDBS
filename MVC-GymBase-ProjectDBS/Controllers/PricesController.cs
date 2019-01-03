@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.Entity;
 using System.Linq;
@@ -8,18 +9,25 @@ using System.Web;
 using System.Web.Mvc;
 using MVC_GymBase_ProjectDBS.Models;
 
+
 namespace MVC_GymBase_ProjectDBS.Controllers
 {
     public class PricesController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
+
+
         // GET: Prices
         public ActionResult Index()
         {
-            return View(db.Prices.ToList());
+            string stripePublishableKey = ConfigurationManager.AppSettings["stripePublishableKey"];
+            var model = new IndexViewModel() { StripePublishableKey = stripePublishableKey };
+            return View(model);
+            //return View(db.Prices.ToList());
         }
 
+        
         // GET: Prices/Details/5
         public ActionResult Details(int? id)
         {
