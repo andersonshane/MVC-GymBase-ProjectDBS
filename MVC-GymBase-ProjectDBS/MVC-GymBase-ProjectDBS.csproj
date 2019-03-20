@@ -228,13 +228,42 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Database_Gym.mdf" />
+    <Content Include="App_Data\Database_Gym_log.ldf">
+      <DependentUpon>Database_Gym.mdf</DependentUpon>
+    </Content>
+    <Content Include="App_Data\facilities.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\B1.png" />
+    <Content Include="Content\Images\B2.png" />
+    <Content Include="Content\Images\B3.png" />
+    <Content Include="Content\Images\B4.png" />
+    <Content Include="Content\Images\B5.png" />
+    <Content Include="Content\Images\B6.png" />
+    <Content Include="Content\Images\B7.png" />
     <Content Include="Content\Images\Banner1.png" />
     <Content Include="Content\Images\Banner2.jpg" />
     <Content Include="Content\Images\Banner3.jpg" />
+    <Content Include="Content\Images\fc1.jpg" />
+    <Content Include="Content\Images\fc1.png" />
+    <Content Include="Content\Images\fc2.jpg" />
+    <Content Include="Content\Images\fc2.png" />
+    <Content Include="Content\Images\fc3.jpg" />
+    <Content Include="Content\Images\fc3.png" />
+    <Content Include="Content\Images\fc4.jpg" />
+    <Content Include="Content\Images\fc4.png" />
+    <Content Include="Content\Images\fc5.png" />
+    <Content Include="Content\Images\fc6.jpg" />
+    <Content Include="Content\Images\fc6.png" />
+    <Content Include="Content\Images\nutrition.jpg" />
+    <Content Include="Content\Images\ranelagh-1.jpg" />
+    <Content Include="Content\Images\ranelagh-11.jpg" />
+    <Content Include="Content\Images\white.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -325,9 +354,10 @@
     <Content Include="Views\GymClasses\Details.cshtml" />
     <Content Include="Views\GymClasses\Edit.cshtml" />
     <Content Include="Views\GymClasses\Index.cshtml" />
+    <Content Include="Views\Facilities\StatusC.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <Folder Include="Views\Products\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -338,6 +368,9 @@
     <EmbeddedResource Include="Migrations\201811271522437_InitialCreate.resx">
       <DependentUpon>201811271522437_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

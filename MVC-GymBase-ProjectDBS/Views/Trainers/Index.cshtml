@@ -3,61 +3,133 @@
 @{
     ViewBag.Title = "Index";
 }
-
+<body style="background-image: url('../../Content/Images/B7.png');
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.FirstName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LastName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Phone)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Email)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Salary)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.GymClassID)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.FirstName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LastName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Phone)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Email)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Salary)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.GymClassID)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.TrainerIDModels }) |
-            @Html.ActionLink("Details", "Details", new { id=item.TrainerIDModels }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.TrainerIDModels })
-        </td>
-    </tr>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_layout.cshtml";
 }
 
-</table>
+<section id="gallery" class="py-5">
+
+    <div class="container">
+        <div class="text-center">
+            <h1 class="text-center pt-0">Our Trainers</h1>
+            <p class="text-center">Personal trainers can help produce a training plan built around your abilities and timeframe. They can help with motivation and nutrition.</p
+
+                <button class="btn btn-success"></button>
+                @if (Session["id"] == null)
+                {
+                    @Html.ActionLink("Book Now", "Login", "User", null, new { @class = "btn btn-primary" })
+                }
+                else
+                {
+                    @Html.ActionLink("Book Now", "AddPtSession", "Classes", null, new { @class = "btn btn-primary" })
+                }
+</div>
+
+        <div class="row mt-5">
+            <div class="col-md-4 mb-4">
+
+                <div class="card border-0 text-white text-center">
+                    <a href="~/Content/Images/person1.jpg" data-toggle="lightbox" data-gallery="img-gallery">
+                        <img src="~/Content/Images/person1.jpg" class="img-fluid" alt="">
+                    </a>
+                    <div class="card-img-overlay ">
+                        <h2 class="card-text  display-4">Simon Flynn</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-0 text-white text-center">
+                    <a href="~/Content/Images/person2.jpg" data-toggle="lightbox" data-gallery="img-gallery">
+                        <img src="~/Content/Images/person2.jpg" class="img-fluid" alt="">
+                    </a>
+                    <div class="card-img-overlay ">
+                        <h2 class="card-text  display-4">Colm Griffin</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-0 text-white text-center">
+                    <a href="~/Content/Images/person3.jpg" data-toggle="lightbox" data-gallery="img-gallery">
+                        <img src="~/Content/Images/person3.jpg" class="img-fluid" alt="">
+                    </a>
+                    <div class="card-img-overlay ">
+                        <h2 class="card-text  display-4">David Brien</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card border-0 text-white text-center">
+                    <a href="~/Content/Images/person4.jpg" data-toggle="lightbox" data-gallery="img-gallery">
+                        <img src="~/Content/Images/person4.jpg" class="img-fluid" alt="">
+                    </a>
+                    <div class="card-img-overlay ">
+                        <h2 class="card-text  display-4">Tim Dalton</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-0 text-white text-center">
+                    <a href="~/Content/Images/person5.jpg" data-toggle="lightbox" data-gallery="img-gallery">
+                        <img src="~/Content/Images/person5.jpg" class="img-fluid" alt="">
+                    </a>
+                    <div class="card-img-overlay ">
+                        <h2 class="card-text  display-4">Mark Flynn</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-0 text-white text-center">
+                    <a href="~/Content/Images/person6.jpg" data-toggle="lightbox" data-gallery="img-gallery">
+                        <img src="~/Content/Images/person6.jpg" class="img-fluid" alt="">
+                    </a>
+                    <div class="card-img-overlay ">
+                        <h2 class="card-text  display-4">Adam North</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-md-4 mb-4">
+                <div class="card border-0 text-white text-center">
+                    <a href="~/Content/Images/person7.jpg" data-toggle="lightbox" data-gallery="img-gallery">
+                        <img src="~/Content/Images/person7.jpg" class="img-fluid" alt="">
+                    </a>
+                    <div class="card-img-overlay ">
+                        <h2 class="card-text  display-4">Jim Franklin</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-0 text-white text-center">
+                    <a href="~/Content/Images/person8.jpg" data-toggle="lightbox" data-gallery="img-gallery">
+                        <img src="~/Content/Images/person8.jpg" class="img-fluid" alt="">
+                    </a>
+                    <div class="card-img-overlay ">
+                        <h2 class="card-text  display-4">Tony Baldwin</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-0 text-white text-center">
+                    <a href="~/Content/Images/person9.jpg" data-toggle="lightbox" data-gallery="img-gallery">
+                        <img src="~/Content/Images/person9.jpg" class="img-fluid" alt="">
+                    </a>
+                    <div class="card-img-overlay ">
+                        <h2 class="card-text  display-4">Sean Hanson</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

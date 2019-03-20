@@ -1,48 +1,51 @@
 ﻿@{
     ViewBag.Title = "Home";
 }
-
+<!---<body style="background-image: url('../../Content/Images/nutrition.jpg');
+                                  "></body>-->
 
 <div id="myCarousel" class="carousel slide">
     <!-- Indicators -->
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
+<ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+</ol>
 
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-        <div class="item active">
-            <img src="~/Content/Images/Banner1.png" alt="First slide">
-            <div class="carousel-caption">
-                <h1>Join Now | Central Location | No Contracts <i class="glyphicon-euro mb-4" aria-hidden="true"></i> </h1>
-
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/Content/Images/Banner2.jpg" alt="Second slide">
-            <div class="carousel-caption">
-                <h1>Feel The Burn </h1>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/Content/Images/Banner3.jpg" alt="Second slide">
-            <div class="carousel-caption">
-                <h1>
-                    Additional Layout Options at <a href="http://startbootstrap.com">http://startbootstrap.com</a>
-                </h1>
-            </div>
+<!-- Wrapper for slides -->
+<div class="carousel-inner">
+    <div class="item active">
+        <img src="~/Content/Images/B1.png" alt="First slide">
+        <div class="carousel-caption">
+            <h1>Join Now | Now Open | No Contracts <i class="glyphicon-euro mb-4" aria-hidden="true"></i> </h1>
+            @Html.ActionLink("Learn More", "", "Prices", null, new { @class = "btn btn-danger btn-g" })
         </div>
     </div>
+    <div class="item">
+        <img src="~/Content/Images/B2.png" alt="Second slide">
+        <div class="carousel-caption">
+            <h1>Start Your Workout Today</h1>
+            @Html.ActionLink("Learn More", "", "Prices", null, new { @class = "btn btn-danger btn-g" })
+        </div>
+    </div>
+    <div class="item">
+        <img src="~/Content/Images/B3.png" alt="Second slide">
+        <div class="carousel-caption">
+            <h1>
+                Start Your Contract <p> @Html.ActionLink("Learn More", "", "Prices", null, new { @class = "btn btn-danger btn-g" })</p></a>
+            </h1>
 
-    <!-- Controls -->
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-        <span class="icon-prev"></span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-        <span class="icon-next"></span>
-    </a>
+        </div>
+    </div>
+</div>
+
+<!-- Controls -->
+<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="icon-prev"></span>
+</a>
+<a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="icon-next"></span>
+</a>
 </div>
 
 <div class="section">
@@ -51,16 +54,20 @@
 
         <div class="row">
             <div class="col-lg-4 col-md-4">
-                <h3><i class="fa fa-check-circle"></i> Bootstrap 3 Built</h3>
-                <p>The 'Modern Business' website template by <a href="http://startbootstrap.com">Start Bootstrap</a> is built with <a href="http://getbootstrap.com">Bootstrap 3</a>. Make sure you're up to date with latest Bootstrap documentation!</p>
+                <h3><i class="fa fa-check-circle"></i> Membership</h3>
+                <p>€29 Monthly + Joining Fee </p>
+                @Html.ActionLink("Learn More", "", "Prices", null, new { @class = "btn btn-danger btn-g" })
+            </div>
+            
+            <div class="col-lg-4 col-md-4">
+                <h3><i class="fa fa-pencil"></i> All Your Nutrition Needs </h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in luctus tortor. Phasellus quis tellus et dui efficitur efficitur fringilla eu lorem. Proin tempus risus in lorem vulputate posuere. Vivamus non urna sapien. Nulla porta enim erat, nec ultricies massa pulvinar a. Sed eget efficitur leo. Vestibulum sodales sed tellus eu lobortis. Cras eleifend, turpis sed volutpat tempus, augue risus gravida augue, gravida sagittis lectus purus et dolor. Etiam maximus ex finibus erat lacinia, vel tincidunt dolor rhoncus. Curabitur volutpat consectetur risus, vel aliquam tortor hendrerit sit amet. Quisque vitae convallis diam. Aliquam id justo ac lacus vehicula ultricies eget at erat. Morbi accumsan nisi id ipsum venenatis posuere. </a>!</p>
+                @Html.ActionLink("Learn More", "", "Prices", null, new { @class = "btn btn-danger btn-g" })
             </div>
             <div class="col-lg-4 col-md-4">
-                <h3><i class="fa fa-pencil"></i> Ready to Style &amp; Edit</h3>
-                <p>You're ready to go with this pre-built page structure, now all you need to do is add your own custom stylings! You can see some free themes over at <a href="http://bootswatch.com">Bootswatch</a>, or come up with your own using <a href="http://getbootstrap.com/customize/">the Bootstrap customizer</a>!</p>
-            </div>
-            <div class="col-lg-4 col-md-4">
-                <h3><i class="fa fa-folder-open"></i> Many Page Options</h3>
-                <p>This template features many common pages that you might see on a business website. Pages include: about, contact, portfolio variations, blog, pricing, FAQ, 404, services, and general multi-purpose pages.</p>
+                <h3><i class="fa fa-folder-open"></i> Get Your Fitness Plan</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in luctus tortor. Phasellus quis tellus et dui efficitur efficitur fringilla eu lorem. Proin tempus risus in lorem vulputate posuere. Vivamus non urna sapien. Nulla porta enim erat, nec ultricies massa pulvinar a. Sed eget efficitur leo. Vestibulum sodales sed tellus eu lobortis. </p>
+                @Html.ActionLink("Click Here", "", "Prices", null, new { @class = "btn btn-danger btn-g" })
             </div>
         </div>
         <!-- /.row -->
@@ -85,8 +92,8 @@
 
         <div class="row">
             <div class="col-lg-12">
-                <h2>Modern Business: A Clean &amp; Simple Full Website Template by Start Bootstrap</h2>
-                <p>A complete website design featuring various single page templates from Start Bootstraps library of free HTML starter templates.</p>
+                <h2>Start Your Membership Now!</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quibusdam fugiat autem sit ex dolores?</p>
                 <hr>
             </div>
         </div>
@@ -108,7 +115,7 @@
 <!-- /.section-colored -->
 <!-- /.section -->
 <!--Prices section-->
-<section id="info py-3">
+<!----<section id="info py-3">
     <div class="container">
         <div class="row">
             <div class="col-sm-6 align-self-center">
@@ -118,10 +125,10 @@
             </div>
             <div class="col-sm-6 align-self-right">
                 <!---- <img src="" alt="" class="img-fluid">-->
-            </div>
+           <!--- </div>
         </div>
     </div>
-</section>
+</section>--->
 
 
 <!-- /.row -->

@@ -1,33 +1,66 @@
-﻿@model IEnumerable<MVC_GymBase_ProjectDBS.Models.Facilities>
-
-@{
-    ViewBag.Title = "Index";
+﻿  @{  ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_layout.cshtml";
 }
 
-<h2>Index</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.FacilityIDModels }) |
-            @Html.ActionLink("Details", "Details", new { id=item.FacilityIDModels }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.FacilityIDModels })
-        </td>
-    </tr>
-}
-
-</table>
+<section id="icon-boxes" class="p-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card bg-dark text-white text-center">
+                    <img class="card-img" src="~/Content/Images/fc1.png" alt="Facilities Image">
+                    <div class="card-img-overlay">
+                        <h2 class="card-title pt-5 mt-2 display-5">Cardio</h2>
+                        <p class="card-text"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus vitae adipisci cum explicabo, omnis porro tenetur</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card bg-dark text-white text-center">
+                    <img class="card-img" src="~/Content/Images/fc2.png" alt="Facilities Image">
+                    <div class="card-img-overlay">
+                        <h2 class="card-title pt-5 mt-2 display-5">Free Weights</h2>
+                        <p class="card-text"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus vitae adipisci cum explicabo, omnis porro tenetur</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card bg-dark text-white text-center">
+                    <img class="card-img" src="~/Content/Images/fc3.png" alt="Facilities Image">
+                    <div class="card-img-overlay">
+                        <h2 class="card-title pt-5 mt-2 display-5">Static Machines</h2>
+                        <p class="card-text"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus vitae adipisci cum explicabo, omnis porro tenetur</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card bg-dark text-white text-center">
+                    <img class="card-img" src="~/Content/Images/fc4.png" alt="Facilities Image">
+                    <div class="card-img-overlay">
+                        <h2 class="card-title pt-5 mt-2 display-5">Weight Racks</h2>
+                        <p class="card-text"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus vitae adipisci cum explicabo, omnis porro tenetur</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card bg-dark text-white text-center">
+                    <img class="card-img" src="~/Content/Images/fc5.png" alt="Facilities Image">
+                    <div class="card-img-overlay">
+                        <h2 class="card-title pt-5 mt-2 display-5">Functional Areas</h2>
+                        <p class="card-text"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus vitae adipisci cum explicabo, omnis porro tenetur</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card bg-dark text-white text-center">
+                    <img class="card-img" src="~/Content/Images/fc6.png" alt="Facilities Image">
+                    <div class="card-img-overlay">
+                        <h2 class="card-title pt-5 mt-2 display-5">Spinning Rooms</h2>
+                        <p class="card-text"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus vitae adipisci cum explicabo, omnis porro tenetur</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
