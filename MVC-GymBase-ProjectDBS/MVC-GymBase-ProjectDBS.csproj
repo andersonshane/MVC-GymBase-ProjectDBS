@@ -263,6 +263,16 @@
     <Content Include="Content\Images\nutrition.jpg" />
     <Content Include="Content\Images\ranelagh-1.jpg" />
     <Content Include="Content\Images\ranelagh-11.jpg" />
+    <Content Include="Content\Images\t10.jpg" />
+    <Content Include="Content\Images\t11.jpg" />
+    <Content Include="Content\Images\t13.jpg" />
+    <Content Include="Content\Images\t14.jpg" />
+    <Content Include="Content\Images\t15.jpg" />
+    <Content Include="Content\Images\t5.jpg" />
+    <Content Include="Content\Images\t6.jpg" />
+    <Content Include="Content\Images\t7.jpg" />
+    <Content Include="Content\Images\t8.jpg" />
+    <Content Include="Content\Images\t9.jpg" />
     <Content Include="Content\Images\white.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
